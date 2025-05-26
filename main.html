@@ -8,6 +8,22 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        .portrait {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #0077cc;
         }
         table {
             width: 100%;
@@ -43,10 +59,19 @@
         .clickable-cell {
             cursor: pointer;
         }
+        .social-links {
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
-    <h1>黄彻斯特 ETK</h1>
+    <div class="header-container">
+        <img src="portrait.jpg" alt="Chester's Portrait" class="portrait">
+        <div>
+            <h1>黄彻斯特 ETK</h1>
+            <p>Student | Average minecraft player</p>
+        </div>
+    </div>
     
     <table>
         <tr>
@@ -62,19 +87,20 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
         </tr>
     </table>
     
-    <p>I would introduce myself as Chester or Patrick as discord nickname. A student from Jakarta. My point of research about Implementating Algorithm efficiency on some algorithm and also in Analytical NT work (Number Theory-Cryptography) and some chemical work .</p>
+    <p>I would introduce myself as Chester or Patrick as discord nickname. A student from Jakarta. My research focuses on implementing algorithm efficiency, Analytical Number Theory work (Number Theory-Cryptography) and some chemical work.</p>
     
-    <ul>
-        <li><a href="https://scholar.google.co.id/citations?hl=en&user=L6AFKG0AAAAJ#d=gs_hdr_drw&t=1748187953756">Google Scholar</a></li>
-        <li><a href="https://artofproblemsolving.com/community/user/1112972">AoPS</a></li>
-        <li><a href="https://www.instagram.com/chester.fsx004?igsh=enRydHY2ajlmb2xw">Instagram</a></li>
-        <li><a href="https://x.com/Ghab891060?t=cNKFPPw14FO1skK_r1ZH7Q&s=09">X Twitter</a></li>
-        <li><a href="https://open.spotify.com/user/31kjbjfra6t6adqhlfmhdlhof46e?si=ce3d0d8ea4864011">Spotify</a></li>
-    </ul>
+    <div class="social-links">
+        <h3>Connect with me:</h3>
+        <ul>
+            <li><a href="https://scholar.google.co.id/citations?hl=en&user=L6AFKG0AAAAJ" target="_blank">Google Scholar</a></li>
+            <li><a href="https://artofproblemsolving.com/community/user/1112972" target="_blank">AoPS</a></li>
+            <li><a href="https://www.instagram.com/chester.fsx004" target="_blank">Instagram</a></li>
+            <li><a href="https://x.com/Ghab891060" target="_blank">X (Twitter)</a></li>
+            <li><a href="https://open.spotify.com/user/31kjbjfra6t6adqhlfmhdlhof46e" target="_blank">Spotify</a></li>
+        </ul>
+    </div>
 </body>
 </html>
