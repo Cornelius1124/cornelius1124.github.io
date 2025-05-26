@@ -23,7 +23,7 @@
             background-color: #f2f2f2;
             cursor: pointer;
         }
-        th:hover {
+        th:hover, .clickable-cell:hover {
             background-color: #e6e6e6;
         }
         a {
@@ -40,6 +40,9 @@
             color: inherit;
             text-decoration: none;
         }
+        .clickable-cell {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -54,8 +57,8 @@
             <th><a href="reading.html" class="nav-link">Reading Resources</a></th>
         </tr>
         <tr>
-            <th><a href="Non mathematical work.html" class="nav-link"></a>NMW</th>
-            <th><a href="Contacts information.html" class="nav-link"></a>CI</th>
+            <td class="clickable-cell"><a href="non-math.html" class="nav-link">Non-Mathematical Work</a></td>
+            <td class="clickable-cell"><a href="contact.html" class="nav-link">Contact Information</a></td>
             <td></td>
             <td></td>
             <td></td>
