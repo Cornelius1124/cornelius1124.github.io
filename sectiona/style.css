@@ -6,11 +6,11 @@ body {
     font-family: 'Cormorant Garamond', serif;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 40px;
     line-height: 1.7;
-    color: #333;
+    color: #222;
     background-color: #fff;
-    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path opacity="0.05" d="M0 10 L100 10 L100 20 L0 20 Z M0 40 L100 40 L100 50 L0 50 Z M0 70 L100 70 L100 80 L0 80 Z" fill="%23000"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path opacity="0.03" d="M0 10 L100 10 L100 15 L0 15 Z M0 30 L100 30 L100 35 L0 35 Z M0 50 L100 50 L100 55 L0 55 Z M0 70 L100 70 L100 75 L0 75 Z M0 90 L100 90 L100 95 L0 95 Z" fill="%23000"/></svg>');
 }
 
 /* Academic Banner */
@@ -19,9 +19,9 @@ body {
     height: 280px;
     object-fit: cover;
     margin-bottom: 40px;
-    border-bottom: 3px solid #8B0000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    filter: grayscale(20%) contrast(110%);
+    border-bottom: 3px solid #003366;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    filter: brightness(0.98) contrast(105%);
 }
 
 /* Header Text */
@@ -29,7 +29,7 @@ body {
     text-align: center;
     margin: 40px 0;
     padding-bottom: 20px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 h1 {
@@ -37,15 +37,15 @@ h1 {
     font-size: 2.4rem;
     font-weight: 600;
     margin: 0;
-    color: #222;
-    letter-spacing: 0.5px;
+    color: #111;
+    letter-spacing: 0.3px;
 }
 
 .chinese-text {
     font-family: 'Noto Serif SC', serif;
     font-weight: 500;
     font-size: 2.6rem;
-    color: #333;
+    color: #222;
 }
 
 /* Academic Navigation Table */
@@ -60,21 +60,21 @@ table {
 th, td {
     padding: 14px 20px;
     text-align: center;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 th {
-    background-color: #f8f8f8;
+    background-color: #f8fafc;
     font-weight: 600;
     font-size: 1.1rem;
-    color: #8B0000;
+    color: #003366;
     letter-spacing: 0.5px;
 }
 
 /* Navigation Links */
 .nav-link {
     text-decoration: none;
-    color: #555;
+    color: #444;
     font-size: 1.1rem;
     transition: all 0.3s ease;
     padding: 3px 0;
@@ -82,7 +82,7 @@ th {
 }
 
 .nav-link:hover {
-    color: #8B0000;
+    color: #003366;
 }
 
 .nav-link::after {
@@ -92,7 +92,7 @@ th {
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: #8B0000;
+    background-color: #003366;
     transition: width 0.3s ease;
 }
 
@@ -113,7 +113,7 @@ p {
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
-        padding: 20px;
+        padding: 30px;
     }
     
     .banner {
@@ -129,12 +129,15 @@ p {
     }
     
     th, td {
-        padding: 10px 12px;
-        font-size: 0.95rem;
+        padding: 12px 15px;
     }
 }
 
 @media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+    
     .banner {
         height: 160px;
     }
@@ -147,4 +150,11 @@ p {
         font-size: 1.9rem;
     }
     
-   
+    table {
+        font-size: 0.9rem;
+    }
+    
+    p {
+        padding: 0;
+    }
+}
