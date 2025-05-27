@@ -1,279 +1,123 @@
-/* style.css */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
 
-:root {
-  --oxford-blue: #002147;
-  --accent-blue: #4178a6;
-  --parchment: #f8f5f0;
-  --gold: #c9a66b;
-  --text: #333;
-  --border: #d1c7b7;
-}
-
+/* Base Styles */
 body {
     font-family: 'Cormorant Garamond', serif;
-    max-width: 1024px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 50px;
-    line-height: 1.8;
-    color: var(--text);
-    background-color: var(--parchment);
-    background-image: 
-        linear-gradient(to right, var(--border) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--border) 1px, transparent 1px);
-    background-size: 24px 24px;
+    padding: 40px;
+    line-height: 1.7;
+    color: #222;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path opacity="0.03" d="M0 10 L100 10 L100 15 L0 15 Z M0 30 L100 30 L100 35 L0 35 Z M0 50 L100 50 L100 55 L0 55 Z M0 70 L100 70 L100 75 L0 75 Z M0 90 L100 90 L100 95 L0 95 Z" fill="%23000"/></svg>');
 }
 
-/* Academic Letterhead Style */
-.header-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 50px;
-    padding-bottom: 25px;
-    border-bottom: 2px solid var(--gold);
-}
-
-.portrait {
-    width: 160px;
-    height: 160px;
+/* Academic Banner */
+.banner {
+    width: 100%;
+    height: 280px;
     object-fit: cover;
-    border-radius: 2px;
-    border: 1px solid var(--border);
-    box-shadow: 
-        0 3px 12px rgba(0,0,0,0.1),
-        inset 0 0 0 6px var(--parchment);
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    filter: sepia(10%) contrast(110%);
+    margin-bottom: 40px;
+    border-bottom: 3px solid #003366;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    filter: brightness(0.98) contrast(105%);
 }
 
-.portrait:hover {
-    transform: translateY(-5px);
-    box-shadow: 
-        0 6px 20px rgba(0,0,0,0.15),
-        inset 0 0 0 6px var(--parchment);
-    filter: sepia(5%) contrast(115%);
+/* Header Text */
+.header-text {
+    text-align: center;
+    margin: 40px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 h1 {
-    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 2.4rem;
-    margin: 0 0 10px 0;
-    color: var(--oxford-blue);
-    letter-spacing: 0.5px;
-    position: relative;
-    display: inline-block;
-}
-
-h1::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 60px;
-    height: 2px;
-    background: var(--gold);
+    font-weight: 600;
+    margin: 0;
+    color: #111;
+    letter-spacing: 0.3px;
 }
 
 .chinese-text {
     font-family: 'Noto Serif SC', serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2.6rem;
-    color: var(--oxford-blue);
-    letter-spacing: 1px;
+    color: #222;
 }
 
-.header-container p {
-    font-style: italic;
-    color: var(--accent-blue);
-    margin: 15px 0 0;
-    font-size: 1.2rem;
-    position: relative;
-    display: inline-block;
-}
-
-.header-container p::before {
-    content: "—";
-    margin-right: 8px;
-    color: var(--gold);
-}
-
-/* Academic Navigation Panel */
+/* Academic Navigation Table */
 table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 50px 0;
-    background: white;
-    box-shadow: 
-        0 4px 20px rgba(0,0,0,0.08),
-        inset 0 0 0 1px rgba(255,255,255,0.8);
-    border-radius: 3px;
-    overflow: hidden;
-    border: 1px solid var(--border);
+    border-collapse: collapse;
+    margin: 40px 0;
+    font-family: 'Cormorant Garamond', serif;
+    border: 1px solid #e0e0e0;
 }
 
 th, td {
-    padding: 18px 30px;
+    padding: 14px 20px;
     text-align: center;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #e8e8e8;
 }
 
 th {
-    background: linear-gradient(to bottom, var(--oxford-blue), #003366);
-    color: white;
+    background-color: #f8fafc;
     font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 0.95rem;
-    position: relative;
+    font-size: 1.1rem;
+    color: #003366;
+    letter-spacing: 0.5px;
 }
 
-th:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 20%;
-    height: 60%;
-    width: 1px;
-    background: rgba(255,255,255,0.2);
-}
-
+/* Navigation Links */
 .nav-link {
-    color: white;
     text-decoration: none;
+    color: #444;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
+    padding: 3px 0;
     position: relative;
-    display: inline-block;
 }
 
 .nav-link:hover {
-    color: var(--gold);
-    transform: translateY(-1px);
+    color: #003366;
 }
 
-.clickable-cell {
-    background-color: rgba(201, 166, 107, 0.05);
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #003366;
+    transition: width 0.3s ease;
 }
 
-.clickable-cell .nav-link {
-    color: var(--oxford-blue);
-    font-weight: 500;
+.nav-link:hover::after {
+    width: 100%;
 }
 
-.clickable-cell .nav-link:hover {
-    color: var(--accent-blue);
-}
-
-/* Academic Content */
+/* Content Styles */
 p {
-    font-size: 1.2rem;
-    margin: 40px 0;
-    line-height: 1.9;
+    font-size: 1.15rem;
+    margin: 30px 0;
     padding: 0 20px;
-    position: relative;
-}
-
-p::first-letter {
-    font-size: 1.8rem;
-    color: var(--oxford-blue);
-    float: left;
-    margin-right: 8px;
-    line-height: 0.8;
-    font-weight: 600;
-}
-
-/* Social Links Section */
-.social-links {
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 2px solid var(--gold);
-    text-align: center;
-}
-
-.social-links h3 {
-    font-weight: 500;
-    color: var(--oxford-blue);
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-    font-size: 1.3rem;
-    position: relative;
-    display: inline-block;
-}
-
-.social-links h3::before,
-.social-links h3::after {
-    content: "•";
-    color: var(--gold);
-    margin: 0 15px;
-    position: relative;
-    top: -3px;
-}
-
-.social-links ul {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 0;
-    list-style: none;
-    flex-wrap: wrap;
-}
-
-.social-links a {
-    color: var(--oxford-blue);
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.social-links a:hover {
-    background: white;
-    color: var(--accent-blue);
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     body {
-        padding: 40px 30px;
+        padding: 30px;
     }
     
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
-    }
-    
-    h1::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .header-container p::before {
-        display: none;
-    }
-    
-    th, td {
-        padding: 14px 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        padding: 30px 20px;
-        background-size: 18px 18px;
-    }
-    
-    .portrait {
-        width: 140px;
-        height: 140px;
+    .banner {
+        height: 200px;
     }
     
     h1 {
@@ -284,13 +128,33 @@ p::first-letter {
         font-size: 2.2rem;
     }
     
+    th, td {
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+    
+    .banner {
+        height: 160px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .chinese-text {
+        font-size: 1.9rem;
+    }
+    
     table {
         font-size: 0.9rem;
     }
     
-    .social-links ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+    p {
+        padding: 0;
     }
 }
