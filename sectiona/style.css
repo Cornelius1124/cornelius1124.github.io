@@ -1,148 +1,123 @@
 /* Google Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
 
 /* Base Styles */
 body {
-    font-family: 'Centaur', 'Times New Roman', serif;
-    max-width: 1200px;
+    font-family: 'Cormorant Garamond', serif;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
-    line-height: 1.6;
+    padding: 30px;
+    line-height: 1.7;
     color: #333;
-    background-color: #f9f7f3;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path opacity="0.05" d="M0 10 L100 10 L100 20 L0 20 Z M0 40 L100 40 L100 50 L0 50 Z M0 70 L100 70 L100 80 L0 80 Z" fill="%23000"/></svg>');
 }
 
-/* Banner Styles */
+/* Academic Banner */
 .banner {
     width: 100%;
-    height: 250px;
+    height: 280px;
     object-fit: cover;
-    margin-bottom: 30px;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 1px solid #e0d6c9;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #8B0000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    filter: grayscale(20%) contrast(110%);
 }
 
 /* Header Text */
 .header-text {
     text-align: center;
-    margin: 30px 0;
-    padding: 0 20px;
+    margin: 40px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 h1 {
-    font-family: 'Centaur', serif;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-    color: #5a3921;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 0;
+    color: #222;
+    letter-spacing: 0.5px;
 }
 
-.header-text p {
-    font-size: 1.2rem;
-    color: #7a5c3c;
-    margin-top: 0;
-}
-
-/* Chinese Character Styling */
 .chinese-text {
     font-family: 'Noto Serif SC', serif;
     font-weight: 500;
-    font-size: 2.7rem;
-    color: #3a2c1b;
+    font-size: 2.6rem;
+    color: #333;
 }
 
-/* Navigation Table */
+/* Academic Navigation Table */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 30px 0;
-    font-family: 'Centaur', serif;
-    border: 1px solid #e0d6c9;
+    margin: 40px 0;
+    font-family: 'Cormorant Garamond', serif;
+    border: 1px solid #e0e0e0;
 }
 
 th, td {
-    padding: 12px 15px;
+    padding: 14px 20px;
     text-align: center;
-    border-bottom: 1px solid #e0d6c9;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 th {
-    background-color: #f1e9dd;
-    font-weight: normal;
+    background-color: #f8f8f8;
+    font-weight: 600;
     font-size: 1.1rem;
+    color: #8B0000;
+    letter-spacing: 0.5px;
 }
 
 /* Navigation Links */
 .nav-link {
     text-decoration: none;
-    color: #5a3921;
+    color: #555;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    padding: 5px 10px;
-    border-radius: 3px;
+    padding: 3px 0;
+    position: relative;
 }
 
 .nav-link:hover {
-    color: #3a2c1b;
-    background-color: #f1e9dd;
-    text-decoration: none;
+    color: #8B0000;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #8B0000;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 /* Content Styles */
 p {
-    font-size: 1.1rem;
-    margin: 20px 0;
-    padding: 0 10px;
-    line-height: 1.7;
-}
-
-/* Social Links */
-.social-links {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.social-links h3 {
-    font-family: 'Centaur', serif;
-    font-size: 1.3rem;
-    color: #5a3921;
-    margin-bottom: 20px;
-}
-
-.social-links ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.social-links li {
-    margin: 5px 0;
-}
-
-.social-links a {
-    text-decoration: none;
-    color: #7a5c3c;
-    font-family: 'Centaur', serif;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 3px;
-}
-
-.social-links a:hover {
-    color: #5a3921;
-    background-color: #f1e9dd;
+    font-size: 1.15rem;
+    margin: 30px 0;
+    padding: 0 20px;
+    line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    
     .banner {
-        height: 180px;
+        height: 200px;
     }
     
     h1 {
@@ -154,18 +129,14 @@ p {
     }
     
     th, td {
-        padding: 8px 10px;
-        font-size: 0.9rem;
-    }
-    
-    .social-links ul {
-        gap: 15px;
+        padding: 10px 12px;
+        font-size: 0.95rem;
     }
 }
 
 @media (max-width: 480px) {
     .banner {
-        height: 150px;
+        height: 160px;
     }
     
     h1 {
@@ -173,15 +144,7 @@ p {
     }
     
     .chinese-text {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
     
-    table {
-        font-size: 0.8rem;
-    }
-    
-    .social-links ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
+   
