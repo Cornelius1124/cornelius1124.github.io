@@ -1,0 +1,160 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Cormorant Garamond', serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    line-height: 1.7;
+    color: #222;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path opacity="0.03" d="M0 10 L100 10 L100 15 L0 15 Z M0 30 L100 30 L100 35 L0 35 Z M0 50 L100 50 L100 55 L0 55 Z M0 70 L100 70 L100 75 L0 75 Z M0 90 L100 90 L100 95 L0 95 Z" fill="%23000"/></svg>');
+}
+
+/* Academic Banner */
+.banner {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #003366;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    filter: brightness(0.98) contrast(105%);
+}
+
+/* Header Text */
+.header-text {
+    text-align: center;
+    margin: 40px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 0;
+    color: #111;
+    letter-spacing: 0.3px;
+}
+
+.chinese-text {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 500;
+    font-size: 2.6rem;
+    color: #222;
+}
+
+/* Academic Navigation Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    font-family: 'Cormorant Garamond', serif;
+    border: 1px solid #e0e0e0;
+}
+
+th, td {
+    padding: 14px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #003366;
+    letter-spacing: 0.5px;
+}
+
+/* Navigation Links */
+.nav-link {
+    text-decoration: none;
+    color: #444;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 3px 0;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #003366;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #003366;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Content Styles */
+p {
+    font-size: 1.15rem;
+    margin: 30px 0;
+    padding: 0 20px;
+    line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 30px;
+    }
+    
+    .banner {
+        height: 200px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .chinese-text {
+        font-size: 2.2rem;
+    }
+    
+    th, td {
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+    
+    .banner {
+        height: 160px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .chinese-text {
+        font-size: 1.9rem;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    p {
+        padding: 0;
+    }
+}
