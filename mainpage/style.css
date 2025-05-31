@@ -1,118 +1,97 @@
 /* Google Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
 
 /* Base Styles */
 body {
-    font-family: 'Centaur', 'Times New Roman', serif;
+    font-family: 'Cormorant Garamond', serif;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
     line-height: 1.6;
     color: #333;
-    background-color: #f9f7f3;
+    background-color: #f9f9f9;
 }
 
-/* Profile Container & Photo Styles */
-.profile-container {
+/* Header Container */
+.header-container {
     display: flex;
     align-items: center;
     gap: 30px;
     margin-bottom: 30px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .portrait {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    /* Changed to square by removing border-radius */
-    border: 4px solid #e0d6c9;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    /* Optional: Add slight rounded corners for softer square */
-    border-radius: 4px;
+    border: 2px solid #003366;
+    border-radius: 5px; /* Subtle rounded corners for square */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.portrait:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    /* Maintain square shape on hover */
-    border-radius: 4px;
-}
-
-.profile-text {
+.header-text {
     flex: 1;
 }
 
-/* Header Text */
 h1 {
-    font-family: 'Centaur', serif;
     font-size: 2.5rem;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-    color: #5a3921;
+    margin: 0 0 10px 0;
+    color: #222;
 }
 
-.profile-text p {
-    font-size: 1.2rem;
-    color: #7a5c3c;
-    margin-top: 0;
-}
-
-/* Chinese Character Styling */
 .chinese-text {
     font-family: 'Noto Serif SC', serif;
     font-weight: 500;
-    font-size: 2.7rem;
-    color: #3a2c1b;
 }
 
-/* Navigation Table */
+/* Navigation */
+.nav-container {
+    margin: 30px 0;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 30px 0;
-    font-family: 'Centaur', serif;
-    border: 1px solid #e0d6c9;
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: center;
-    border-bottom: 1px solid #e0d6c9;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 th {
-    background-color: #f1e9dd;
-    font-weight: normal;
-    font-size: 1.1rem;
+    padding: 12px;
+    background-color: #f5f5f5;
+    font-weight: 600;
 }
 
-/* Navigation Links */
 .nav-link {
     text-decoration: none;
-    color: #5a3921;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    padding: 5px 10px;
-    border-radius: 3px;
+    color: #444;
+    transition: color 0.3s;
 }
 
 .nav-link:hover {
-    color: #3a2c1b;
-    background-color: #f1e9dd;
-    text-decoration: none;
+    color: #003366;
 }
 
-/* Content Styles */
-p {
-    font-size: 1.1rem;
-    margin: 20px 0;
-    padding: 0 10px;
-    line-height: 1.7;
+/* Video Section */
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+video {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Content */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 /* Social Links */
@@ -122,38 +101,51 @@ p {
 }
 
 .social-links h3 {
-    font-family: 'Centaur', serif;
-    font-size: 1.3rem;
-    color: #5a3921;
-    margin-bottom: 20px;
+    color: #003366;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
 .social-links ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     display: flex;
-    gap: 25px;
     justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
-}
-
-.social-links li {
-    margin: 5px 0;
 }
 
 .social-links a {
     text-decoration: none;
-    color: #7a5c3c;
-    font-family: 'Centaur', serif;
-    font-size: 1.1rem;
+    color: #555;
     transition: color 0.3s;
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 3px;
 }
 
 .social-links a:hover {
-    color: #5a3921;
-    background-color: #f1e9dd;
+    color: #003366;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .portrait {
+        margin-bottom: 20px;
+    }
+    
+    video {
+        width: 80% !important;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+}
